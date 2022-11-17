@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <title>Signup/Login Page</title>
+</head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#" name="signup" method="post">
+			<h1>Create Account</h1>
+      <br>
+			<div id="flname">
+				<input type="name" id="fname" placeholder="First Name" pattern="[A-Za-z]+" title="Only alphabets" required>
+				<input type="name" id="lname" placeholder="Last Name" pattern="[A-Za-z]+" title="Only alphabets" required>
+			</div>
+			<input type="text" placeholder="Username" pattern="[A-Za-z0-9_]{5,}" title="Only alphabets and underscore, min length = 5" required/>
+			<input type="email" placeholder="Email" required/>
+      <input type="text" placeholder="Age" pattern="[0-9]+" title="Only numbers" required/>
+			<input type="text" placeholder="Phone Number" pattern="{^\+?[0-9-]+$}" title="Enter phone number only" required/>
+      <div class="pass">
+        <input type="password" class="box" placeholder="Password" id="password" name="password" required/>
+        <i class="bi bi-eye-slash" id="togglePassword"></i>
+      </div>
+      <div class="pass">
+        <input type="password" placeholder="Confirm Password" id="password3" name="password" required/>
+        <i class="bi bi-eye-slash" id="togglePassword3"></i>
+      </div>
+			<center>
+				<p id="stat"></p>
+			</center>
+      <br>
+			<button id="signup">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#" name="signin" method="post">
+			<h1>Sign in</h1>
+			<br>
+			<input type="name"  placeholder="Username" required/>
+			<div class="pass">
+        <input type="password" placeholder="Password" id="password2" name="password" required/>
+        <i class="bi bi-eye-slash" id="togglePassword2"></i>
+      </div>
+			<a href="#">Forgot your password?</a>
+			<button id="signin">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+  </p>
+</footer>
+<script src="signup.js"></script>
+</body>
+</html>
